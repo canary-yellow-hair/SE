@@ -22,6 +22,26 @@ Googel Fonts  */
 .bg-flat-color-1 {
   background: #00c292; }
 
+.rescult{
+    /* align:center; */
+    align-content: center;
+    padding:10px 5px 0px 5px;
+  }
+#result,#result0{
+    width:300px;
+    height:40px;
+    font-size:35px;
+    text-align:right;
+    direction:ltr; 
+    border:#C0C0C0;
+    overflow:hidden;      
+    background-color:lightgray;
+    word-wrap : normal;	
+  }
+#result0{
+    font-size:25px;
+  }
+  
 .bg-flat-color-2 {
   background: #ab8ce4; }
 
