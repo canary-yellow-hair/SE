@@ -1,16 +1,4 @@
-/* This css file is to over write bootstarp css
---------------------------------------------------------- /
-* Theme Name: Ela Admin Template
-* Theme URI: http://demos.jeweltheme.com/
-* Author: jewel_theme
-* Author URI: http://themeforest.net/user/jewel_theme/portfolio
-* Description:
-* Version: 1.0.0
-* License: GNU General Public License v2 or later
-* License URI: http://www.gnu.org/licenses/gpl-2.0.html
-* Tags: html, themplate, Ela Admin
---------------------------------------------------------- */
-/* 
+
 
 
 Googel Fonts  */
@@ -27,9 +15,9 @@ Googel Fonts  */
     align-content: center;
     padding:10px 5px 0px 5px;
   }
-#result,#result0{
-    width:300px;
-    height:40px;
+#result{
+    width:450px;
+    height:45px;
     font-size:35px;
     text-align:right;
     direction:ltr; 
@@ -40,6 +28,14 @@ Googel Fonts  */
   }
 #result0{
     font-size:25px;
+    width:450px;
+    height:35px;
+    text-align:right;
+    direction:ltr; 
+    border:#C0C0C0;
+    overflow:hidden;      
+    background-color:lightgray;
+    word-wrap : normal;	
   }
   
 .bg-flat-color-2 {
@@ -376,7 +372,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 24px;
-  color: #878787; }
+  color: #000000; }
 
 p:focus {
   border: none;
@@ -2584,5 +2580,27 @@ button:active{
 .enter-result:hover{
   transition-duration: 0.3s;
   background: #ecffd3;
+}
+
+.ui-btn__calculator,.ui-btn__reset{
+  display:inline-block;
+  position: relative;
+  text-align: left;
+  margin-right: 6px;
+  width: 90px;
+  height: 40px;
+  font-size: 15px;
+  color: #3b3237;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #868e96;
+  border-radius: 16px;
+  background-image: linear-gradient(to bottom,#e6e6e6,#e6e6e6 );
+}
+.ui-btn{
+  display: block;
+  padding-bottom: 25px;
+  background-color: #ffffff;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
