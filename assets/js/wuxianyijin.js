@@ -12,7 +12,7 @@ $('.ui-btn__calculator').click(function() {
         alert('请将数据填写完整');
         return false;
     }
-    var city = Number($('#city').val());
+    var city = String($('#city').val());
     var i=Number($('#income').val());
     var d5=Number($('#sbdown').val());//五险-社保基数上下限
     var u5=Number($('#sbup').val());
@@ -23,7 +23,7 @@ $('.ui-btn__calculator').click(function() {
     var personal_yanglao,personal_yiliao,personal_shiye,personal_gongshang,personal_shengyu,personal_gongjijin;
     var company_yanglao,company_yiliao,company_shiye,company_gongshang,company_shengyu,company_gongjijin;
     switch(true){
-        case city=1:
+        case city=="北京":
             personal_yanglao_rate=0.08;
             personal_yiliao_rate=0.02;
             personal_shiye_rate=0.002;
@@ -38,7 +38,7 @@ $('.ui-btn__calculator').click(function() {
             company_gongjijin_rate=0.12;
             
             break;
-        case city=2:
+        case city=="上海":
             personal_yanglao_rate=0.08;
             personal_yiliao_rate=0.02;
             personal_shiye_rate=0.01;
@@ -52,7 +52,7 @@ $('.ui-btn__calculator').click(function() {
             company_shengyu_rate=0.008;
             company_gongjijin_rate=0.07;
             break;
-        case city=3:
+        case city=="广州":
             personal_yanglao_rate=0.08;
             personal_yiliao_rate=0.02;
             personal_shiye_rate=0.005;
@@ -68,7 +68,7 @@ $('.ui-btn__calculator').click(function() {
             var company_zhongji_rate=0.0085;
             company_gongjijin_rate=0.08;
             break;
-        case city=4:
+        case city=="深圳":
             personal_yanglao_rate=0.08;
             personal_yiliao_rate=0.02;
             personal_shiye_rate=0.01;

@@ -67,37 +67,21 @@
 
 <body>
     <!-- Left Panel -->
-    <aside id="left-panel" class="left-panel">
+     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <a href="基本计算器.html"><i class="menu-icon fa fa-laptop"></i>基本计算器 </a>
                     </li>
-                
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tables</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Basic Table</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables-data.html">Data Table</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Forms</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Basic Form</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Advanced Form</a></li>
-                        </ul>
-                    </li>
 
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-area-chart"></i>投资理财</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-map-o"></i><a href="国债收益.html">国债收益</a></li>
-                            <li><i class="menu-icon fa fa-street-view"></i><a href="汽车贷款.html">汽车贷款</a></li>
-                            <li><i class="menu-icon fa fa-street-view"></i><a href="股票交易手续费.html">股票交易手续费</a></li>
-                            <li><i class="menu-icon fa fa-street-view"></i><a href="购房租房比较.html">购房与租房比较</a></li>
-                            <li><i class="menu-icon fa fa-street-view"></i><a href="二手房.html">二手房购房</a></li>
+                            <li><i class="menu-icon fa fa-street-view"></i><a href="汽车贷款.html">汽车/住房贷款</a></li>
+                            <li><i class="menu-icon fa fa-street-view"></i><a href="银行储蓄.html">银行储蓄</a></li>
+                            <li><i class="menu-icon fa fa-street-view"></i><a href="零存整取.html">零存整取</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -106,7 +90,6 @@
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="年终奖.html">年终奖个人所得税</a></li>
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="偶然所得.html">偶然所得个人所得税</a></li>
                             <li><i class="menu-icon fa fa-paper-plane"></i><a href="工资.html">工资个人所得税</a></li>
-                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="工资(反推).html">工资个人所得税（反推）</a></li>
                             <li><i class="menu-icon fa fa-paper-plane"></i><a href="劳务报酬.html">劳务报酬个人所得税</a></li>
                             <li><i class="menu-icon fa fa-paper-plane"></i><a href="五险一金.html">五险一金</a></li>
                         </ul>
@@ -140,21 +123,25 @@
             <div class="animated fadeIn">       
                 <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">年终奖个人所得税计算器</strong>
+                                <strong class="card-title">零存整取计算器</strong>
                             </div>
                             <div class="card-body">
                                 <!-- Credit Card -->
                                 <div id="pay-invoice">
                                     <div class="card-body">
                                         <div class="card-title">
-                                            <h3 class="text-center">年终奖个人所得税</h3>
+                                            <h3 class="text-center">零存整取</h3>
                                         </div>
                                         <hr>
                                         <form action="#" method="post" novalidate="novalidate">
                                            
                                             <div class="form-group">
-                                                <label for="cc-payment" class="control-label mb-1">年终奖金额</label>
-                                                <input id="cc-payment"  type="text" value=""/>
+                                                <label for="cc-payment" class="control-label mb-1">储蓄存期（年）</label>
+                                                <input id="year"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0})\d*/,'$1$2$3')" value="" />
+                                                <label for="cc-payment" class="control-label mb-1">年利率（%）</label>
+                                                <input id="rate"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" step=0.01 value="" />
+                                                <label for="cc-payment" class="control-label mb-1">每月存入金额（元）</label>
+                                                <input id="amount"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value="" />
                                             </div>
           <div class="ui-result">
         <div class="ui-result__bg">
@@ -166,6 +153,49 @@
                 </p>
             </div>
             <p id="isResult" class="isResult">
+            </p>
+        </div>
+    </div>                                 
+                                            
+                                            <div>
+                                               <div class="ui-btn">
+        <div class="ui-btn__calculator">
+            <div class="ui-btn__icon1">
+            </div>
+            <p>
+                计算
+            </p>
+        </div>
+        <div class="ui-btn__reset">
+            <div class="ui-btn__icon2">
+            </div>
+            <p>
+                重置
+            </p>
+        </div>
+    </div>
+                                            </div>
+                                        </form>
+                                        <form action="#" method="post" novalidate="novalidate">
+                                           
+                                            <div class="form-group">
+                                                <label for="cc-payment" class="control-label mb-1">储蓄存期（年）</label>
+                                                <input id="year1"  value="" type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0})\d*/,'$1$2$3')"/>
+                                                <label for="cc-payment" class="control-label mb-1">年利率（%）</label>
+                                                <input id="rate1"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" step=0.01 value="" />
+                                                <label for="cc-payment" class="control-label mb-1">到期本息总额（元）</label>
+                                                <input id="sum1"   type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value="" />
+                                            </div>
+          <div class="ui-result">
+        <div class="ui-result__bg">
+            <div id="notResult" class="ui-result__show">
+                <div class="ui-result__img">
+                </div>
+                <p class="ui-result__text">
+                    结果呈现
+                </p>
+            </div>
+            <p id="isResult1" class="isResult">
             </p>
         </div>
     </div>                                 
@@ -274,7 +304,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-    <script src="assets/js/nianzhongjiang.js"></script>
+    <script src="assets/js/lingcunzhengqu.js"></script>
 
     <!--  Chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>

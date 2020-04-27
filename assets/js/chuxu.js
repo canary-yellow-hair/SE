@@ -1,34 +1,26 @@
 $('.ui-btn__reset').click(function() {
     $(":input").val('');
 });
-const newLocal = 0;
 $('.ui-btn__calculator').click(function() {
     function isNull() {
         var flag = true;
-        if ($('#cc-payment').val() == '') flag = false;
+        if ($('#cc-payment').val() == ''||$('#cc-payment-tax').val() == ''||$('#cc-payment-year').val() == '') flag = false;
         return flag;
     }
     if (!isNull()) {
         alert('请将数据填写完整');
         return false;
     }
-    var year = Number($('#year').val());
-    var rate = Number($('#rate').val());
-    var a = Number($('#amount').val());
-    var year1 = Number($('#year1').val());
-    var rate1 = Number($('#rate1').val());
-    var sum1 = Number($('#sum1').val());
-    var interest,sum,b,m;
-    interest=rate*a*(year*12+1)/2*year;
-    sum=interest+a*12*year;
-    m=rate1*(year1*12+1)*year1/2+12*year1;
-    b=sum1/m;
-    var output = "&nbsp&nbsp到期本息总额：" + sum + "元";
-    var output1= "&nbsp&nbsp初期存入金额：" + b + "元";
+    var money = Number($('#cc-payment').val());
+    var tax=Number($('#cc-payment-tax').val())/100;
+    var year=Number($('#cc-payment-year').val());
+    
+    var lixi=money*tax*year;
+    var benli=lixi+money;
+    
+    var output = "&nbsp&nbsp" + year+ "年后获得的总利息"+lixi.toFixed(2)+"元</br>&nbsp&nbsp本息合计" + benli.toFixed(2)+  "元。";
     var isResult = document.getElementById("isResult");
     isResult.innerHTML = output;
-    var isResult1 = document.getElementById("isResult1");
-    isResult1.innerHTML = output1;
     var notResult = document.getElementById("notResult");
     notResult.innerHTML = "";
 });
