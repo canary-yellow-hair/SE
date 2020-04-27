@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* This css file is to over write bootstarp css
 --------------------------------------------------------- /
 * Theme Name: Ela Admin Template
@@ -11,6 +12,9 @@
 * Tags: html, themplate, Ela Admin
 --------------------------------------------------------- */
 /* 
+=======
+
+>>>>>>> origin/xxbranch
 
 
 Googel Fonts  */
@@ -22,6 +26,37 @@ Googel Fonts  */
 .bg-flat-color-1 {
   background: #00c292; }
 
+<<<<<<< HEAD
+=======
+.rescult{
+    /* align:center; */
+    align-content: center;
+    padding:10px 5px 0px 5px;
+  }
+#result{
+    width:450px;
+    height:45px;
+    font-size:35px;
+    text-align:right;
+    direction:ltr; 
+    border:#C0C0C0;
+    overflow:hidden;      
+    background-color:lightgray;
+    word-wrap : normal;	
+  }
+#result0{
+    font-size:25px;
+    width:450px;
+    height:35px;
+    text-align:right;
+    direction:ltr; 
+    border:#C0C0C0;
+    overflow:hidden;      
+    background-color:lightgray;
+    word-wrap : normal;	
+  }
+  
+>>>>>>> origin/xxbranch
 .bg-flat-color-2 {
   background: #ab8ce4; }
 
@@ -356,7 +391,11 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 24px;
+<<<<<<< HEAD
   color: #878787; }
+=======
+  color: #000000; }
+>>>>>>> origin/xxbranch
 
 p:focus {
   border: none;
@@ -2565,4 +2604,29 @@ button:active{
   transition-duration: 0.3s;
   background: #ecffd3;
 }
+<<<<<<< HEAD
+=======
+
+.ui-btn__calculator,.ui-btn__reset{
+  display:inline-block;
+  position: relative;
+  text-align: left;
+  margin-right: 6px;
+  width: 90px;
+  height: 40px;
+  font-size: 15px;
+  color: #3b3237;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #868e96;
+  border-radius: 16px;
+  background-image: linear-gradient(to bottom,#e6e6e6,#e6e6e6 );
+}
+.ui-btn{
+  display: block;
+  padding-bottom: 25px;
+  background-color: #ffffff;
+  text-align: center;
+}
+>>>>>>> origin/xxbranch
 /*# sourceMappingURL=style.css.map */
