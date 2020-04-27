@@ -359,11 +359,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 24px;
-<<<<<<< HEAD
-  color: #878787; }
-=======
   color: #000000; }
->>>>>>> origin/xxbranch
 
 p:focus {
   border: none;

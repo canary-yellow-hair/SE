@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-/* This css file is to over write bootstarp css
---------------------------------------------------------- /
-* Theme Name: Ela Admin Template
-* Theme URI: http://demos.jeweltheme.com/
-* Author: jewel_theme
-* Author URI: http://themeforest.net/user/jewel_theme/portfolio
-* Description:
-* Version: 1.0.0
-* License: GNU General Public License v2 or later
-* License URI: http://www.gnu.org/licenses/gpl-2.0.html
-* Tags: html, themplate, Ela Admin
---------------------------------------------------------- */
-/* 
-=======
 
->>>>>>> origin/xxbranch
 
 
 Googel Fonts  */
@@ -26,8 +10,6 @@ Googel Fonts  */
 .bg-flat-color-1 {
   background: #00c292; }
 
-<<<<<<< HEAD
-=======
 .rescult{
     /* align:center; */
     align-content: center;
@@ -56,7 +38,6 @@ Googel Fonts  */
     word-wrap : normal;	
   }
   
->>>>>>> origin/xxbranch
 .bg-flat-color-2 {
   background: #ab8ce4; }
 
@@ -391,11 +372,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 24px;
-<<<<<<< HEAD
-  color: #878787; }
-=======
   color: #000000; }
->>>>>>> origin/xxbranch
 
 p:focus {
   border: none;
@@ -2604,8 +2581,6 @@ button:active{
   transition-duration: 0.3s;
   background: #ecffd3;
 }
-<<<<<<< HEAD
-=======
 
 .ui-btn__calculator,.ui-btn__reset{
   display:inline-block;
@@ -2628,5 +2603,4 @@ button:active{
   background-color: #ffffff;
   text-align: center;
 }
->>>>>>> origin/xxbranch
 /*# sourceMappingURL=style.css.map */
