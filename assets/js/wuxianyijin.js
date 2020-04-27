@@ -1,3 +1,7 @@
+/**
+ * @author 邢可卿
+ * @description 计算器
+ */
 $('.ui-btn__reset').click(function() {
     $(":input").val('');
 });
@@ -5,7 +9,7 @@ const newLocal = 0;
 $('.ui-btn__calculator').click(function() {
     function isNull() {
         var flag = true;
-        if ($('#cc-payment').val() == '') flag = false;
+        if ($('#income').val() == ''||$('#city').val() == ''||$('#sbdown').val() == ''||$('#sbup').val() == ''||$('gjdown').val() == ''||$('#gjup').val() == '') flag = false;
         return flag;
     }
     if (!isNull()) {

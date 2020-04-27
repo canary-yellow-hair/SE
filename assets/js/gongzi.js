@@ -1,3 +1,7 @@
+/**
+ * @author 邢可卿
+ * @description 计算器
+ */
 $('.ui-btn__reset').click(function() {
     $(":input").val('');
 });
@@ -5,7 +9,7 @@ const newLocal = 0;
 $('.ui-btn__calculator').click(function() {
     function isNull() {
         var flag = true;
-        if ($('#cc-payment').val() == '') flag = false;
+        if ($('#month').val() == ''||$('#salary').val() == ''||$('#sum_salary'||$('#insur').val() == ''||$('#other').val() == ''||$('#sum_other').val() == '').val() == '')flag = false;
         return flag;
     }
     if (!isNull()) {
@@ -23,6 +27,7 @@ $('.ui-btn__calculator').click(function() {
     s0=s-s1;
     i0=i-i1;
     o0=o-o1;
+ 
     if(s<=5000){
         alert('工资5000以内无须纳税');
     }
@@ -98,7 +103,7 @@ $('.ui-btn__calculator').click(function() {
   
     tax1=tax-tax0;
     income=s1-tax1;
-    var output = "&nbsp&nbsp应纳税所得额：" + x + "元</br>&nbsp&nbsp适用税率：" + rate*100+ "%</br>&nbsp&nbsp累计应缴税款：" + tax+ "元</br>&nbsp&nbsp已缴税款："+tax0+"元</br>&nbsp&nbsp应补税款:"+tax1+"元</br>&nbsp&nbsp本月税后收入："+income+"元";
+    var output = "&nbsp&nbsp应纳税所得额：" + x + "元</br>&nbsp&nbsp适用税率：" + rate*100+ "%</br>&nbsp&nbsp累计应缴税款：" + tax.toFixed(2)+ "元</br>&nbsp&nbsp已缴税款："+tax0.toFixed(2)+"元</br>&nbsp&nbsp应补税款:"+tax1.toFixed(2)+"元</br>&nbsp&nbsp本月税后收入："+income.toFixed(2)+"元";
     var isResult = document.getElementById("isResult");
     isResult.innerHTML = output;
     var notResult = document.getElementById("notResult");

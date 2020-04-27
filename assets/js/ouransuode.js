@@ -1,3 +1,7 @@
+/**
+ * @author 邢可卿
+ * @description 计算器
+ */
 $('.ui-btn__reset').click(function() {
     $(":input").val('');
 });
