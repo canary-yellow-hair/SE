@@ -89,7 +89,9 @@
         <!-- Content -->
         <div class="content">
             <!-- Animated -->
-            <div class="animated fadeIn">       
+            <div class="animated fadeIn">
+            <div class="row">
+            <div class="col-lg-6">       
                 <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">年终奖个人所得税计算器</strong>
@@ -105,25 +107,10 @@
                                         <form action="#" method="post" novalidate="novalidate">
                                            
                                             <div class="form-group">
-                                                <label for="cc-payment" class="control-label mb-1">年终奖金额</label>
+                                                <label for="cc-payment" class="control-label mb-1">年终奖金额（元）</label>
                                                 <input id="cc-payment"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                             </div>
-          <div class="ui-result">
-        <div class="ui-result__bg">
-            <div id="notResult" class="ui-result__show">
-                <div class="ui-result__img">
-                </div>
-                <p class="ui-result__text">
-                    结果呈现
-                </p>
-            </div>
-            <p id="isResult" class="isResult">
-            </p>
-        </div>
-    </div>                                 
-                                            
-                                            <div>
-                                               <div class="ui-btn">
+                                             <div class="ui-btn">
         <div class="ui-btn__calculator">
             <div class="ui-btn__icon1">
             </div>
@@ -139,13 +126,52 @@
             </p>
         </div>
     </div>
+          <div class="ui-result">
+        <div class="ui-result__bg">
+            <div id="notResult" class="ui-result__show">
+                <div class="ui-result__img">
+                </div>
+                <p class="ui-result__text">
+                    结果呈现
+                </p>
+            </div>
+            <p id="isResult" class="isResult">
+            </p>
+        </div>
+    </div>                                 
+                                            
+                                            <div>
+                                              
                                             </div>
                                         </form>
                                     </div>
                                 </div>
 
                             </div>
-                        </div> <!-- .card -->
+                        </div> 
+                        </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">相关知识</strong>
+                            </div>
+                            <div class="card-body">
+                                <h3><strong>年终奖缴税计算</strong></h3>
+                                <hr>
+                                <p>年终奖缴税有两种计算方法，既可以选择与工资薪金合并计税，也可以选择单独计税。两种计税方式不同，纳税人可以选择任意一种缴税，我们这里采用的是单独计税。</p>
+                                <strong>计算公式：</strong>
+                                <p>应纳税额=全年一次性奖金收入×适用税率-速算扣除数</p>
+                                <strong>特别注意：</strong>
+                                <p>一般来说，全年收入较低者采用综合计税更划算<br>年终奖金额处于个人所得税税率“跳档”的临界点时，较多的年终奖可能因为跳档缴纳更多的税额，最终税后奖金反而低于较低年终奖</p>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                        <!-- .card -->
                 <!-- Modal - Calendar - Add New Event -->
                 <div class="modal fade none-border" id="event-modal">
                     <div class="modal-dialog">

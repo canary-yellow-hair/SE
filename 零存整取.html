@@ -89,19 +89,17 @@
         <!-- Content -->
         <div class="content">
             <!-- Animated -->
-            <div class="animated fadeIn">       
+            <div class="animated fadeIn">     
                 <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">零存整取计算器</strong>
                             </div>
                             <div class="card-body">
-                                <!-- Credit Card -->
-                                <div id="pay-invoice">
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h3 class="text-center">零存整取</h3>
-                                        </div>
+                                <div class="row">  
+                                    <div class="col-lg-6">                                       
+                                        <h3 class="text-center">零存</h3>
                                         <hr>
+                                        <p align="center">每个月存一定金额，到期后本息一共多少呢？</p>
                                         <form action="#" method="post" novalidate="novalidate">
                                            
                                             <div class="form-group">
@@ -112,41 +110,42 @@
                                                 <label for="cc-payment" class="control-label mb-1">每月存入金额（元）</label>
                                                 <input id="amount"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value="" />
                                             </div>
-          <div class="ui-result">
-        <div class="ui-result__bg">
-            <div id="notResult" class="ui-result__show">
-                <div class="ui-result__img">
-                </div>
-                <p class="ui-result__text">
-                    结果呈现
-                </p>
-            </div>
-            <p id="isResult" class="isResult">
-            </p>
-        </div>
-    </div>                                 
-                                            
-                                            <div>
-                                               <div class="ui-btn">
-        <div class="ui-btn__calculator">
-            <div class="ui-btn__icon1">
-            </div>
-            <p>
-                计算
-            </p>
-        </div>
-        <div class="ui-btn__reset">
-            <div class="ui-btn__icon2">
-            </div>
-            <p>
-                重置
-            </p>
-        </div>
-    </div>
+                                            <div class="ui-btn">
+                                                <div class="ui-btn__calculator">
+                                                    <div class="ui-btn__icon1">
+                                                    </div>
+                                                    <p>
+                                                        计算
+                                                    </p>
+                                                </div>
+                                                <div class="ui-btn__reset">
+                                                    <div class="ui-btn__icon2">
+                                                    </div>
+                                                    <p>
+                                                        重置
+                                                    </p>
+                                                </div>
                                             </div>
+                                            <div class="ui-result">
+                                                <div class="ui-result__bg">
+                                                    <div id="notResult" class="ui-result__show">
+                                                        <div class="ui-result__img">
+                                                    </div>
+                                                    <p class="ui-result__text">
+                                                        结果显示
+                                                    </p>
+                                                </div>
+                                                <p id="isResult" class="isResult">
+                                                </p>
+                                            </div>                                
                                         </form>
+                                    </div>
+                                </div>
+                                    <div class="col-lg-6">                                      
+                                        <h3 class="text-center">整取</h3>
+                                        <hr>
+                                        <p align="center"> 如果想在一定时间内攒够钱，每个月应该存多少呢？</p>
                                         <form action="#" method="post" novalidate="novalidate">
-                                           
                                             <div class="form-group">
                                                 <label for="cc-payment" class="control-label mb-1">储蓄存期（年）</label>
                                                 <input id="year1"  value="" type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0})\d*/,'$1$2$3')"/>
@@ -155,44 +154,41 @@
                                                 <label for="cc-payment" class="control-label mb-1">到期本息总额（元）</label>
                                                 <input id="sum1"   type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value="" />
                                             </div>
-          <div class="ui-result">
-        <div class="ui-result__bg">
-            <div id="notResult" class="ui-result__show">
-                <div class="ui-result__img">
-                </div>
-                <p class="ui-result__text">
-                    结果呈现
-                </p>
-            </div>
-            <p id="isResult1" class="isResult">
-            </p>
-        </div>
-    </div>                                 
-                                            
-                                            <div>
-                                               <div class="ui-btn">
-        <div class="ui-btn__calculator">
-            <div class="ui-btn__icon1">
-            </div>
-            <p>
-                计算
-            </p>
-        </div>
-        <div class="ui-btn__reset">
-            <div class="ui-btn__icon2">
-            </div>
-            <p>
-                重置
-            </p>
-        </div>
-    </div>
+                                            <div class="ui-btn">
+                                                <div class="ui-btn__calculator2">
+                                                    <div class="ui-btn__icon1">
+                                                    </div>
+                                                    <p>
+                                                        计算
+                                                    </p>
+                                                </div>
+                                                <div class="ui-btn__reset2">
+                                                    <div class="ui-btn__icon2">
+                                                    </div>
+                                                    <p>
+                                                        重置
+                                                    </p>
+                                                </div>
                                             </div>
+                                            <div class="ui-result">
+                                                <div class="ui-result__bg">
+                                                    <div id="notResult2" class="ui-result__show">
+                                                        <div class="ui-result__img">
+                                                        </div>
+                                                        <p class="ui-result__text">
+                                                           结果显示
+                                                        </p>
+                                                    </div>
+                                                    <p id="isResult1" class="isResult">
+                                                    </p>
+                                                </div>
+                                            </div>                                                                  
                                         </form>
                                     </div>
                                 </div>
 
                             </div>
-                        </div> <!-- .card -->
+                </div> <!-- .card -->
                 <!-- Modal - Calendar - Add New Event -->
                 <div class="modal fade none-border" id="event-modal">
                     <div class="modal-dialog">

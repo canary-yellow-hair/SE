@@ -90,7 +90,9 @@
         <!-- Content -->
         <div class="content">
             <!-- Animated -->
-            <div class="animated fadeIn">       
+            <div class="animated fadeIn"> 
+            <div class="row">
+            <div class="col-lg-6">      
                 <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">工资薪金个人所得税计算器</strong>
@@ -98,6 +100,7 @@
                             <div class="card-body">
                                 <!-- Credit Card -->
                                 <div id="pay-invoice">
+                                
                                     <div class="card-body">
                                         <div class="card-title">
                                             <h3 class="text-center">工资薪金个人所得税</h3>
@@ -109,34 +112,19 @@
                                                 <label for="cc-payment" class="control-label mb-1">纳税期数（月）</label>
                                                 <input id="month"type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0})\d*/,'$1$2$3')" value=""/>
                                                 <label for="cc-payment" class="control-label mb-1">本月工资</label>
-                                                <input id="salary" type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
+                                                <input id="salary" type="number"  oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                                 <label for="cc-payment" class="control-label mb-1">累计工资</label>
-                                                <input id="sum_salary"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
+                                                <input id="sum_salary"  type="number" onfocus="sumSalary()" oninput="his.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                                 <label for="cc-payment" class="control-label mb-1">五险一金（个人）</label>
                                                 <input id="insur"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                                 <label for="cc-payment" class="control-label mb-1">五险一金（个人）累计</label>
-                                                <input id="sum_insur" type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
+                                                <input id="sum_insur" type="number" onfocus="sumSalary1()" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                                 <label for="cc-payment" class="control-label mb-1">专项附加扣除</label>
                                                 <input id="other"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                                 <label for="cc-payment" class="control-label mb-1">累计扣除</label>
-                                                <input id="sum_other"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
+                                                <input id="sum_other"  type="number" onfocus="sumSalary2()" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                             </div>
-          <div class="ui-result">
-        <div class="ui-result__bg">
-            <div id="notResult" class="ui-result__show">
-                <div class="ui-result__img">
-                </div>
-                <p class="ui-result__text">
-                    结果呈现
-                </p>
-            </div>
-            <p id="isResult" class="isResult">
-            </p>
-        </div>
-    </div>                                 
-                                            
-                                            <div>
-                                               <div class="ui-btn">
+                                              <div class="ui-btn">
         <div class="ui-btn__calculator">
             <div class="ui-btn__icon1">
             </div>
@@ -152,13 +140,53 @@
             </p>
         </div>
     </div>
-                                            </div>
+          <div class="ui-result">
+        <div class="ui-result__bg">
+            <div id="notResult" class="ui-result__show">
+                <div class="ui-result__img">
+                </div>
+                <p class="ui-result__text">
+                    结果呈现
+                </p>
+            </div>
+            <canvas id="pieChart"></canvas>
+            <p id="isResult" class="isResult">
+            </p>
+        </div>
+    </div>                                 
+                                            
+                                       
                                         </form>
                                     </div>
                                 </div>
-
                             </div>
+                        
+                        </div>  
                         </div> <!-- .card -->
+                        <div class="col-lg-6">
+                            <div class="card">
+                            <div class ="card-header">
+                                <strong class="card-title">相关知识</strong>
+                            </div>
+                            <div class="card-body">
+                                <h3><strong>工资薪金缴税</strong></h3>
+                                <hr>
+                                <p>工资、薪金所得，是指个人因任职或受雇而取得的工资、薪金、奖金、年终加薪、劳动分红、津贴、补贴以及与任职或受雇有关的其他所得。</p>
+
+                                <strong>计算公式：</strong>   
+                                <p>累计预扣预缴应纳税所得额=累计收入-累计免税收入-累计减除费用-累计专项扣除-累计专项附加扣除-累计依法确定的其他扣除<br>
+
+                                本期应预扣预缴税额=（累计预扣预缴应纳税所得额×预扣率-速算扣除数)-累计减免税额-累计已预扣预缴税额<br></p>
+
+                                <p>其中：累计减除费用，按照个税起征点5000元/月乘以纳税人当年截至本月在本单位的任职受雇月份数计算。</p>
+                                <p>左表填写提示：累计默认值为单期*缴纳期数
+                                <p>在税率没有办法改变的情况下，一部分的工资薪金可以通过一些福利进行发放。单位可以增加员工福利项目，这样在没有给员工加薪的情况下，达到了给员工减轻税负的目的 ，变相的增加了员工的得到了收入 。</p>
+                            
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
                 <!-- Modal - Calendar - Add New Event -->
                 <div class="modal fade none-border" id="event-modal">
                     <div class="modal-dialog">

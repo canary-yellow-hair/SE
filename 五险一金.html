@@ -89,7 +89,9 @@
         <!-- Content -->
         <div class="content">
             <!-- Animated -->
-            <div class="animated fadeIn">       
+            <div class="animated fadeIn"> 
+            <div class="row">
+            <div class="col-lg-6">      
                 <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">五险一金计算器</strong>
@@ -116,32 +118,14 @@
                                                     <option value="深圳">深圳</option>
                                                 </datalist>
                                                 <label for="cc-payment" class="control-label mb-1">社保基数下限</label>
-                                                <input id="sbdown"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
+                                                <input id="sbdown"  type="number"  oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                                 <label for="cc-payment" class="control-label mb-1">社保基数上限</label>
-                                                <input id="sbup"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
+                                                <input id="sbup"  type="number"  oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                                 <label for="cc-payment" class="control-label mb-1">公积金基数下限</label>
-                                                <input id="gjdown" type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
+                                                <input id="gjdown" type="number"  oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                                 <label for="cc-payment" class="control-label mb-1">公积金基数上限</label>
-                                                <input id="gjup" type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
-                                                
-                                                
-                                            </div>
-          <div class="ui-result">
-        <div class="ui-result__bg">
-            <div id="notResult" class="ui-result__show">
-                <div class="ui-result__img">
-                </div>
-                <p class="ui-result__text">
-                    结果呈现
-                </p>
-            </div>
-            <p id="isResult" class="isResult">
-            </p>
-        </div>
-    </div>                                 
-                                            
-                                            <div>
-                                               <div class="ui-btn">
+                                                <input id="gjup" type="number"  oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
+                                     <div class="ui-btn">
         <div class="ui-btn__calculator">
             <div class="ui-btn__icon1">
             </div>
@@ -156,14 +140,57 @@
                 重置
             </p>
         </div>
-    </div>
+    </div>            
+                                                
+                                            </div>
+          <div class="ui-result">
+        <div class="ui-result__bg">
+            <div id="notResult" class="ui-result__show">
+                <div class="ui-result__img">
+                </div>
+                <p class="ui-result__text">
+                    结果呈现
+                </p>
+            </div>
+            
+            <p id="isResult" class="isResult"></p>
+            <canvas id="pieChart"></canvas>
+           
+             <p id="isResult1" class="isResult"></p>         
+            <canvas id="pieChart1"></canvas>
+           
+            
+           
+        </div>
+    </div>                                 
+                                            
+                                            <div>
+                                              
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-
+                            </div>
                             </div>
                         </div> <!-- .card -->
+                        <div class="col-lg-6">
+                        <div class="card">
+                        <div class ="card-header">
+                                <strong class="card-title">相关知识</strong>
+                            </div>
+                            <div class="card-body">
+                            <h3><strong >五险一金</strong></h3>
+                            <p>通常情况下社保包括五种，分别为养老保险、医疗保险、工伤保险、生育保险、失业保险，单位和个人都需要缴纳，而且缴纳的比例是不同的，不同地区的缴纳比例略有不同。</p>
+                            <p>计算五险一金水平时，需要用到社保基数和公积金基数，一般来说社保基数下限是当地上一年月平均工资的60%；上限是当地上一年月平均工资的3倍，均可以查阅得出。</p>
+                            <strong>注意：</strong>
+                            <p>养老保险的断保对职工的影响很大，一是因为缴费年限和缴费额的减少而降低退休待遇，有的缴费年限不满15年的，将丧失按月领取养老金的资格。二是影响再就业，失业人员在领取失业金期间可以不缴纳基本养老保险费，也不计作缴费年限。</p>
+                            <p>住房公积金即长期住房储金，是由公司和职工共同缴纳，住房公积金缴存基数按职工本人上一年度月平均工资计算。</p>
+                            <p>医疗保险分为个人账户和统筹基金，个人账户平时生病立刻可以使用，个人账户不足时再用现金支付医疗费用。统筹基金即当我们生了大病，个人无法负担的时候，可以申请统筹基金报销。</p>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
                 <!-- Modal - Calendar - Add New Event -->
                 <div class="modal fade none-border" id="event-modal">
                     <div class="modal-dialog">

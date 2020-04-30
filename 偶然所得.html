@@ -89,7 +89,9 @@
         <!-- Content -->
         <div class="content">
             <!-- Animated -->
-            <div class="animated fadeIn">       
+            <div class="animated fadeIn">    
+            <div class="row">
+            <div class="col-lg-6">   
                 <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">偶然所得个人所得税计算器</strong>
@@ -105,47 +107,72 @@
                                         <form action="#" method="post" novalidate="novalidate">
                                            
                                             <div class="form-group">
-                                                <label for="cc-payment" class="control-label mb-1">偶然所得金额</label>
+                                                <label for="cc-payment" class="control-label mb-1">偶然所得金额（元）</label>
                                                 <input id="cc-payment"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,3})\d*/,'$1$2$3')" value=""/>
                                             </div>
-          <div class="ui-result">
-        <div class="ui-result__bg">
-            <div id="notResult" class="ui-result__show">
-                <div class="ui-result__img">
-                </div>
-                <p class="ui-result__text">
-                    结果呈现
-                </p>
-            </div>
-            <p id="isResult" class="isResult">
-            </p>
-        </div>
-    </div>                                 
-                                            
-                                            <div>
-                                               <div class="ui-btn">
-        <div class="ui-btn__calculator">
-            <div class="ui-btn__icon1">
-            </div>
-            <p>
-                计算
-            </p>
-        </div>
-        <div class="ui-btn__reset">
-            <div class="ui-btn__icon2">
-            </div>
-            <p>
-                重置
-            </p>
-        </div>
-    </div>
+                                            <div class="ui-btn">
+                                                <div class="ui-btn__calculator">
+                                                    <div class="ui-btn__icon1">
+                                                    </div>
+                                                    <p>
+                                                        计算
+                                                    </p>
+                                                </div>
+                                                <div class="ui-btn__reset">
+                                                    <div class="ui-btn__icon2">
+                                                    </div>
+                                                    <p>
+                                                        重置
+                                                    </p>
+                                                </div>
                                             </div>
+                                            <div class="ui-result">
+                                                <div class="ui-result__bg">
+                                                    <div id="notResult" class="ui-result__show">
+                                                        <div class="ui-result__img">
+                                                        </div>
+                                                    <p class="ui-result__text">
+                                                        结果呈现
+                                                    </p>
+                                                </div>
+                                                <p id="isResult" class="isResult">
+                                                </p>
+                                            </div>
+                                        </div>                                 
                                         </form>
                                     </div>
                                 </div>
 
                             </div>
-                        </div> <!-- .card -->
+                </div> <!-- .card -->
+                </div>
+                <div class="col-lg-6">
+                    <div class ="card">
+                        <div class="card-header">
+                        <strong class="card-title">相关知识</strong>
+                        </div>
+                        <div class="card-body">
+                        <h3><strong>偶然所得的定义及缴税计算</strong></h3>
+                        <hr>
+                        <p>偶然所得税是对个人得奖、中奖、中彩以及其他偶然性质的所得而征收的一种税。以个人每次取得的收入额为应纳税所得额，不扣除任何费用。以每次取得的该项收入为一次。</p>
+                        <strong>计算公式：</strong>
+                        <p>应缴税款=偶然所得*20%</p>
+                        <strong>一些特殊规定</strong>
+                         <ul>
+                            <li>彩票中奖小于10000元，免征个税。</li>
+                            <li>一次性奖金按照偶然所得缴税</li>
+                            <li>发票中奖小于800元免征税</li>
+                            <li>企业在活动中向个人发放的红包礼品按照偶然所得缴税，但代金券消费券不用。</li>
+                        </ul>
+                        
+                        
+
+                        </div>
+
+                    </div>
+
+                </div>
+                </div>
                 <!-- Modal - Calendar - Add New Event -->
                 <div class="modal fade none-border" id="event-modal">
                     <div class="modal-dialog">

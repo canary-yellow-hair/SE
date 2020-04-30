@@ -2,6 +2,9 @@
  * @author 邢可卿
  * @description 计算器
  */
+
+
+
 $('.ui-btn__reset').click(function() {
     $(":input").val('');
 });
@@ -17,6 +20,7 @@ $('.ui-btn__calculator').click(function() {
         return false;
     }
     var city = String($('#city').val());
+    
     var i=Number($('#income').val());
     var d5=Number($('#sbdown').val());//五险-社保基数上下限
     var u5=Number($('#sbup').val());
@@ -126,11 +130,106 @@ $('.ui-btn__calculator').click(function() {
     company_gongjijin=i2*company_gongjijin_rate;
     var personal_sum=personal_yanglao+personal_yiliao+personal_shiye+personal_gongshang+personal_shengyu+personal_gongjijin;
     var company_sum=company_yanglao+company_yiliao+company_shiye+company_gongshang+company_shengyu+company_gongjijin;
+    
+    var ctx = document.getElementById( "pieChart" );
+ctx.height = 120;
+var myChart = new Chart( ctx, {
+    type: 'pie',
+    data: {
+        datasets: [ {
+            data: [personal_yanglao,personal_yiliao,personal_shiye,personal_gongshang,personal_shengyu,personal_gongjijin],
+            backgroundColor: [
+                                "rgba(0, 194, 146,0.9)",
+                                "rgba(0,0,0,0.07)",
+                                "rgba(0, 194, 146,0.5)",
+                                "rgba(0, 194, 146,0.3)",
+                                "rgba(0, 194, 146,0.7)",
+                                "rgba(0, 194, 146,0.1)"
 
-    var output = "&nbsp&nbsp个人应缴部分：</br>&nbsp&nbsp养老保险金：" + personal_yanglao + "元</br>&nbsp&nbsp医疗保险金：" + personal_yiliao+ "元</br>&nbsp&nbsp失业保险金：" + personal_shiye+ "元</br>&nbsp&nbsp工伤保险金："+personal_gongshang+"元</br>&nbsp&nbsp生育保险金：" + personal_shengyu+"元</br>&nbsp&nbsp公积金："+ personal_gongjijin+"元"+"</br>&nbsp&nbsp单位应缴部分：</br>&nbsp&nbsp养老保险金：" + company_yanglao + "元</br>&nbsp&nbsp医疗保险金：" + company_yiliao+ "元</br>&nbsp&nbsp失业保险金：" + company_shiye+ "元</br>&nbsp&nbsp工伤保险金："+company_gongshang+"元</br>&nbsp&nbsp生育保险金：" + company_shengyu+"元</br>&nbsp&nbsp公积金："+ company_gongjijin+"元";
+                            ],
+            hoverBackgroundColor: [
+                                "rgba(0, 194, 146,0.9)",
+                                "rgba(0,0,0,0.07)",
+                                "rgba(0, 194, 146,0.5)",
+                                "rgba(0, 194, 146,0.3)",
+                                "rgba(0, 194, 146,0.7)",
+                                "rgba(0, 194, 146,0.1)"
+                            ]
 
+                        } ],
+        labels: [
+                        "养老保险",
+                        "医疗保险",
+                        "失业保险",
+                        "工伤保险",
+                        "生育保险",
+                        "公积金"
+                    ]
+    },
+    options: {
+        responsive: true
+    }
+} );
+
+var ctx = document.getElementById( "pieChart1" );
+ctx.height = 120;
+
+var myChart = new Chart( ctx, {
+    type: 'pie',
+    
+    data: {
+        datasets: [ {
+            data: [company_yanglao,company_yiliao,company_shiye,company_gongshang,company_shengyu,company_gongjijin],
+            backgroundColor: [
+                                "rgba(0, 194, 146,0.9)",
+                                "rgba(0,0,0,0.07)",
+                                "rgba(0, 194, 146,0.5)",
+                                "rgba(0, 194, 146,0.3)",
+                                "rgba(0, 194, 146,0.7)",
+                                "rgba(0, 194, 146,0.1)"
+
+                            ],
+            hoverBackgroundColor: [
+                                "rgba(0, 194, 146,0.9)",
+                                "rgba(0,0,0,0.07)",
+                                "rgba(0, 194, 146,0.5)",
+                                "rgba(0, 194, 146,0.3)",
+                                "rgba(0, 194, 146,0.7)",
+                                "rgba(0, 194, 146,0.1)"
+                            ]
+
+                        } ],
+        labels: [
+                        "养老保险",
+                        "医疗保险",
+                        "失业保险",
+                        "工伤保险",
+                        "生育保险",
+                        "公积金"
+                    ]
+
+
+       
+    },
+
+                        
+                       
+                   
+                
+  
+    options: {
+        responsive: true
+    }
+} );
+
+
+    var output = "&nbsp&nbsp个人应缴部分：</br>&nbsp&nbsp养老保险金：" + personal_yanglao.toFixed(2) + "元</br>&nbsp&nbsp医疗保险金：" + personal_yiliao.toFixed(2)+ "元</br>&nbsp&nbsp失业保险金：" + personal_shiye.toFixed(2)+ "元</br>&nbsp&nbsp工伤保险金："+personal_gongshang.toFixed(2)+"元</br>&nbsp&nbsp生育保险金：" + personal_shengyu.toFixed(2)+"元</br>&nbsp&nbsp公积金："+ personal_gongjijin.toFixed(2)+"元";
+    var output1="&nbsp&nbsp单位应缴部分：</br>&nbsp&nbsp养老保险金：" + company_yanglao.toFixed(2) + "元</br>&nbsp&nbsp医疗保险金：" + company_yiliao.toFixed(2)+ "元</br>&nbsp&nbsp失业保险金：" + company_shiye.toFixed(2)+ "元</br>&nbsp&nbsp工伤保险金："+company_gongshang.toFixed(2)+"元</br>&nbsp&nbsp生育保险金：" + company_shengyu.toFixed(2)+"元</br>&nbsp&nbsp公积金："+ company_gongjijin.toFixed(2)+"元";
     var isResult = document.getElementById("isResult");
     isResult.innerHTML = output;
+
+    var isResult1 = document.getElementById("isResult1");
+    isResult1.innerHTML = output1;
     var notResult = document.getElementById("notResult");
     notResult.innerHTML = "";
 });

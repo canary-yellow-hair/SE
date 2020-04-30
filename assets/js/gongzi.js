@@ -2,6 +2,35 @@
  * @author 邢可卿
  * @description 计算器
  */
+
+
+function sumSalary(){
+
+    var month = $("#month").val();
+    var salary = $("#salary").val();
+
+    $("#sum_salary").val(Number(month)*Number(salary));   
+}
+
+function sumSalary1(){
+
+    var month = $("#month").val();
+    var insur = $("#insur").val();
+
+    $("#sum_insur").val(Number(insur)*Number(month));   
+}
+
+function sumSalary2(){
+
+    var other = $("#other").val();
+    var month = $("#month").val();
+
+    $("#sum_other").val(Number(month)*Number(other));   
+}
+
+
+
+
 $('.ui-btn__reset').click(function() {
     $(":input").val('');
 });
@@ -102,7 +131,38 @@ $('.ui-btn__calculator').click(function() {
     }
   
     tax1=tax-tax0;
-    income=s1-tax1;
+    income=s1-tax1-i1;
+
+
+    var ctx = document.getElementById( "pieChart" );
+ctx.height = 120;
+var myChart = new Chart( ctx, {
+    type: 'pie',
+    data: {
+        datasets: [ {
+            data: [income,tax1,i1 ],
+            backgroundColor: [
+                                "rgba(0, 194, 146,0.9)",
+                                "rgba(0,0,0,0.07)",
+                                "rgba(0, 194, 146,0.5)",
+                            ],
+            hoverBackgroundColor: [
+                                "rgba(0, 194, 146,0.9)",
+                                "rgba(0,0,0,0.07)",
+                                "rgba(0, 194, 146,0.5)"
+                            ]
+
+                        } ],
+        labels: [
+                        "税后收入",
+                        "应缴税款",
+                        "五险一金"
+                    ]
+    },
+    options: {
+        responsive: true
+    }
+} );
     var output = "&nbsp&nbsp应纳税所得额：" + x + "元</br>&nbsp&nbsp适用税率：" + rate*100+ "%</br>&nbsp&nbsp累计应缴税款：" + tax.toFixed(2)+ "元</br>&nbsp&nbsp已缴税款："+tax0.toFixed(2)+"元</br>&nbsp&nbsp应补税款:"+tax1.toFixed(2)+"元</br>&nbsp&nbsp本月税后收入："+income.toFixed(2)+"元";
     var isResult = document.getElementById("isResult");
     isResult.innerHTML = output;

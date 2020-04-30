@@ -89,7 +89,9 @@
         <!-- Content -->
         <div class="content">
             <!-- Animated -->
-            <div class="animated fadeIn">       
+            <div class="animated fadeIn">  
+                <div class="row">
+                <div class="col-lg-6">
                 <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">贷款计算器</strong>
@@ -116,44 +118,61 @@
                                                 <label for="cc-payment" class="control-label mb-1">贷款金额（万元）</label>
                                                 <input id="cc-payment"  type="number" oninput="this.value=this.value.replace(/\D*(\d*)(\.?)(\d{0,6})\d*/,'$1$2$3')" value=""/>
                                             </div>
-          <div class="ui-result">
-        <div class="ui-result__bg">
-            <div id="notResult" class="ui-result__show">
-                <div class="ui-result__img">
-                </div>
-                <p class="ui-result__text">
-                    结果呈现
-                </p>
-            </div>
-            <p id="isResult" class="isResult">
-            </p>
-        </div>
-    </div>                                 
-                                            
-                                            <div>
-                                               <div class="ui-btn">
-        <div class="ui-btn__calculator">
-            <div class="ui-btn__icon1">
-            </div>
-            <p>
-                计算
-            </p>
-        </div>
-        <div class="ui-btn__reset">
-            <div class="ui-btn__icon2">
-            </div>
-            <p>
-                重置
-            </p>
-        </div>
-    </div>
+                                            <div class="ui-btn">
+                                                <div class="ui-btn__calculator">
+                                                    <div class="ui-btn__icon1">
+                                                    </div>
+                                                        <p>
+                                                            计算
+                                                        </p>
+                                                </div>
+                                                <div class="ui-btn__reset">
+                                                    <div class="ui-btn__icon2">
+                                                    </div>
+                                                    <p>
+                                                        重置
+                                                    </p>
+                                                </div>
                                             </div>
+                                            
+                                            <div class="ui-result">
+                                                <div class="ui-result__bg">
+                                                    <div id="notResult" class="ui-result__show">
+                                                       
+                                                        <p class="ui-result__text">
+                                                            结果呈现
+                                                        </p>
+                                                    </div>
+                                                    
+                                                    <p id="isResult" class="isResult">
+                                                    </p>
+                                                     <canvas id="team-chart"></canvas>
+                                                </div>
+                                            </div>                                                              
                                         </form>
                                     </div>
                                 </div>
-
+                            </div>
                             </div>
                         </div> <!-- .card -->
+                        <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                            <strong class="card-title">相关知识</strong>
+                            </div>
+                            <div class="card-body">
+                                <h3><strong>等额本金和等额本息</strong></p>
+                                <hr>
+                                <p>等额本息和等额本金是商贷还款的两种方式。等额本金方式意味着更高的“首付款”——前期还款额高，早期负担重；等额本息则有更高的财务杠杆，用更少的钱翘起了更大规模的资产</p>
+                                <p>等额本息的特点是每月的还款额相同，从本质上来说是本金所占比例逐月递增，利息所占比例逐月递减，月还款数不变。</p>
+                                <p>等额本金的特点是每月的还款额不同，呈现逐月递减的状态;它是将贷款本金按还款的总月数均分，再加上上期剩余本金的利息，这样就形成月还款额。</p>
+                                <p>等额本息每月的还款额度相同，利于记忆、规划、方便还款。所以比较适宜有正常开支计划的家庭，特别是年青人，而且随着年龄增大或职位升迁，收入会增加，生活水平自然会上升，况且随着时间的增长，会使资金的使用价值产生了。</p>   
+                                <p>等额本金法因为在前期的还款额度较大，而后逐月递减，所以比较适合在前段时间还款能力强、经济相对宽裕的贷款人，当然一些年纪稍微大一点的人也比较适合这种方式，因为随着年龄增大或退休，收入可能会减少。</p>                   
+                                <p>所以在选择贷款方式时一定要选择最适合自己的，如果想短期持有，往往等额本息投资率更高；如果想尽快还款，等额本金利息支出少更划算。</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 <!-- Modal - Calendar - Add New Event -->
                 <div class="modal fade none-border" id="event-modal">
                     <div class="modal-dialog">

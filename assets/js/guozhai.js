@@ -21,6 +21,33 @@ $('.ui-btn__calculator').click(function() {
     
     var lixi=money*tax*year;
     var benli=lixi+money;
+    var ctx = document.getElementById( "pieChart" );
+    
+ctx.height = 120;
+var myChart = new Chart( ctx, {
+    type: 'pie',
+    data: {
+        datasets: [ {
+            data: [ money,lixi.toFixed(2) ],
+            backgroundColor: [
+                                "rgba(0, 194, 146,0.9)",
+                                "rgba(0,0,0,0.07)"
+                            ],
+            hoverBackgroundColor: [
+                                "rgba(0, 194, 146,0.9)",
+                                "rgba(0,0,0,0.07)"
+                            ]
+
+                        } ],
+        labels: [
+                        "本金",
+                        "利息"
+                    ]
+    },
+    options: {
+        responsive: true
+    }
+} );
     
     var output = "&nbsp&nbsp" + year+ "年后获得的总利息"+lixi.toFixed(2)+"元</br>&nbsp&nbsp本息合计" + benli.toFixed(2)+  "元。";
     var isResult = document.getElementById("isResult");

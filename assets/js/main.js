@@ -48,7 +48,11 @@ function dot(){
 		document.getElementById('result').value='0';
 		str=document.getElementById('result').value;
 	}
-	str=str+'.';
+	var regtext = /[-/*+]/;
+	if (str === "." && str.indexOf(".") > -1 && regtext.test(str.slice(str.lastIndexOf("."))) === false) {
+		str=str;
+	  }
+	else {str=str+'.';}
  	document.getElementById('result').value=str;
 }
  
